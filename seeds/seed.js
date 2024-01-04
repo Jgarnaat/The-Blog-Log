@@ -7,7 +7,6 @@ const userData = require('./userData.json');
 
 
 const seedDatabase = async () => {
-  try {
     await sequelize.sync({ force: true });
 
     // Create users and store them in an array
@@ -28,11 +27,7 @@ const seedDatabase = async () => {
     });
 
     console.log('Database seeding completed.');
-  } catch (error) {
-    console.error('Error seeding the database:', error);
-  } finally {
     process.exit(0);
-  }
 };
 
 seedDatabase();

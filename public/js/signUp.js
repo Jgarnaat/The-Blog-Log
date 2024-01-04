@@ -26,7 +26,7 @@ const signupFormHandler = async (event) => {
         document.location.replace("/dashboard");
       } else {
         const errorMessage = await response.text();
-        alert(`Signup failed: ${response.statusText}\n${errorMessage}`);
+        alert(`Signup failed: Must provide a username, as well as a password with a length of at least 8 characters`);
       }
     } catch (error) {
       console.error(`An error occurred: ${error.message}`);

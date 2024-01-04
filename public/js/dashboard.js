@@ -1,5 +1,3 @@
-const { link } = require("../../controllers/api");
-
 const createBlog = async (title, description) => {
     try {
       const response = await fetch('/api/blogs', {

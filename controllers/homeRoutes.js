@@ -9,7 +9,8 @@ const handleErrors = (res, err) => {
 };
 
 router.get("/", async (req, res) => {
-  try {
+  try {    
+    const logged_in=req.session.logged_in;
     const blogData = await Blog.findAll({
       include: [
         {

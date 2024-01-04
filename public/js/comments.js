@@ -3,9 +3,7 @@ const commentFormHandler = async (event) => {
 
   const commentForm = document.querySelector(".new-comment-form");
   const blog_id = commentForm.dataset.blogid;
-  const commentDescriptionInput = document.querySelector(
-    "#comment_description"
-  );
+  const commentDescriptionInput = document.querySelector("#comment_description");
   const commentDescription = commentDescriptionInput.value.trim();
 
   if (commentDescription) {
@@ -15,7 +13,7 @@ const commentFormHandler = async (event) => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ blog_id, comment_description:commentDescription }),
+        body: JSON.stringify({ blog_id, comment_description: commentDescription }),
       });
 
       if (response.ok) {

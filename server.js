@@ -30,10 +30,8 @@ const sess = {
 };
 // Use helmet for security headers
 app.use(session(sess));
-
 app.use(helmet());
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -53,6 +51,6 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something went wrong!');
 });
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
 });
