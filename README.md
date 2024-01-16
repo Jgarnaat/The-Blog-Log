@@ -28,6 +28,9 @@ In this project we were tasked with applying concepts learned throughout past mo
 
 ## Deployed application
 
+https://the-blog-log-ec5436b71268.herokuapp.com/
+
+myGithub: https://github.com/Jgarnaat/The-Blog-Log
 
 ## Installation
 
